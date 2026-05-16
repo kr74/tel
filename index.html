@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta property="og:image" content="tel.png" />
+  <title>연속 전화 및 문자 실행</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    iframe { width: 100%; height: 100%; border: 0; display:block; }
+  </style>
+</head>
+<body>
+  <iframe id="gasFrame"
+    src="about:blank"
+    allow="clipboard-read; clipboard-write"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+
+  <script>
+    // 연속 전화/문자 앱용 Apps Script 웹앱 배포 URL
+    const GAS_EXEC_URL = "https://script.google.com/macros/s/AKfycbziTRxwuwBj_KbXxmZ8bCYW0fnWcUajXAJ7SNcTg70NAyNm8KFfGdYJgPvagWNUEcIR/exec";
+
+    // 파라미터 전달 없이 GAS 웹앱을 바로 프레임에 연결합니다.
+    document.getElementById("gasFrame").src = GAS_EXEC_URL;
+  </script>
+</body>
+</html>
